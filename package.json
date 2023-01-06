@@ -1,7 +1,7 @@
 {
   "name": "jamesvollmer",
   "version": "0.1.0",
-  "homepage": "https://jrvollmer.github.io/jrvollmer.github.io",
+  "homepage": "https://jrvollmer.github.io",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
