@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jrvollmer.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/jrvollmer.github.io/static/js/main.73c9ba8a.js",
-    "static/js/787.0ddcc58b.chunk.js": "/jrvollmer.github.io/static/js/787.0ddcc58b.chunk.js",
-    "index.html": "/jrvollmer.github.io/index.html",
-    "main.073c9b0a.css.map": "/jrvollmer.github.io/static/css/main.073c9b0a.css.map",
-    "main.73c9ba8a.js.map": "/jrvollmer.github.io/static/js/main.73c9ba8a.js.map",
-    "787.0ddcc58b.chunk.js.map": "/jrvollmer.github.io/static/js/787.0ddcc58b.chunk.js.map"
+    "main.css": "/static/css/main.073c9b0a.css",
+    "main.js": "/static/js/main.cadc7637.js",
+    "static/js/787.0ddcc58b.chunk.js": "/static/js/787.0ddcc58b.chunk.js",
+    "index.html": "/index.html",
+    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
+    "main.cadc7637.js.map": "/static/js/main.cadc7637.js.map",
+    "787.0ddcc58b.chunk.js.map": "/static/js/787.0ddcc58b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.73c9ba8a.js"
+    "static/js/main.cadc7637.js"
   ]
 }
