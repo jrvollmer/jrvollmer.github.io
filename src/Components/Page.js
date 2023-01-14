@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useRef } from "react";
-import { Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
+import { VStack, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
 import Home from './Home';
 import FaceImage from '../Assets/face.png';
 import EmailImage from '../Assets/email.png';
@@ -33,6 +33,7 @@ function Page() {
                 </Box>
                 <Text as='b' pl='10px' /* TODO */ fontSize='48'>James Vollmer</Text>
                 <Spacer/>
+                {/* TODO Add functionality */}
                 <Text as='b' pr='50px' /* TODO */ color='#000000' opacity={1} fontSize='28'><Text as='u'>Home</Text></Text>
                 <Text as='b' pr='50px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>About</Text>
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>Projects</Text>
@@ -65,6 +66,7 @@ function Page() {
                 backdropFilter='auto'
                 backdropBlur='15px' // TODO Tune or drop the blur
             >
+                {/* TODO Add functionality */}
                 <Image src={GithubImage} fit='fit' h='40px' ml='25px' />
                 <Spacer/>
                 <Image src={LinkedinImage} fit='fit' h='40px' />
@@ -75,6 +77,7 @@ function Page() {
             <Box
                 overflowY='scroll'
                 maxH='100vh'
+                bgColor='#ffffff'
                 css={{
                     "&::-webkit-scrollbar": {
                         width: "0px"
@@ -86,9 +89,28 @@ function Page() {
 
                 <Home/>
 
-                <Box h='320px' bg='#ff0000'></Box>
-                <Box h='320px' bg='#00ff00'></Box>
-                <Box h='321px' bg='#0000ff'></Box>
+
+                <VStack
+                    align='center'
+                    spacing={0}
+                    h='90vh'
+                >
+                    <Box
+                        h='0.75vh'
+                        borderRadius='full'
+                        w='95vw'
+                        bgColor='#000000'
+                    />
+                    <Text as='b' fontSize='72'>About Me</Text>
+                    <Box
+                        h='0.375vh'
+                        borderRadius='full'
+                        w='60vw'
+                        bgColor='#000000'
+                    />
+                    <Spacer/>
+                    <Box h={1}></Box>
+                </VStack>
             </Box>
         </>
     );
