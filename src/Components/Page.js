@@ -1,12 +1,13 @@
 import * as React from "react";
-import { useRef } from "react";
-import { VStack, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
+import { Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
 import Home from './Home';
+import AboutMe from './AboutMe';
+import { useRef } from "react";
+import useOnScreen from './useOnScreen';
 import FaceImage from '../Assets/face.png';
 import EmailImage from '../Assets/email.png';
 import LinkedinImage from '../Assets/linkedin.png';
 import GithubImage from '../Assets/github.png';
-import useOnScreen from './useOnScreen';
 
 function Page() {
     // There will be a reference element to determine when the user is at the top of the screen
@@ -89,28 +90,7 @@ function Page() {
 
                 <Home/>
 
-
-                <VStack
-                    align='center'
-                    spacing={0}
-                    h='90vh'
-                >
-                    <Box
-                        h='0.75vh'
-                        borderRadius='full'
-                        w='95vw'
-                        bgColor='#000000'
-                    />
-                    <Text as='b' fontSize='72'>About Me</Text>
-                    <Box
-                        h='0.375vh'
-                        borderRadius='full'
-                        w='60vw'
-                        bgColor='#000000'
-                    />
-                    <Spacer/>
-                    <Box h={1}></Box>
-                </VStack>
+                <AboutMe/>
             </Box>
         </>
     );
