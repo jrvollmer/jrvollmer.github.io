@@ -1,10 +1,11 @@
 import * as React from "react";
-import { Grid, GridItem, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
+import { Grid, GridItem, VStack, Center, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
 import FaceImage from '../Assets/face.png';
 import BgImage from '../Assets/background.svg';
 import EmailImage from '../Assets/email.png';
 import LinkedinImage from '../Assets/linkedin.png';
 import GithubImage from '../Assets/github.png';
+import DownArrowImage from '../Assets/down_arrow.svg';
 
 function Page() {
     return (
@@ -18,7 +19,7 @@ function Page() {
                         alt='James Vollmer'
                     />
                 </Box>
-                <Text as='b' fontFamily='body' /* TODO */ fontSize='48'>James Vollmer</Text>
+                <Text as='b' /* TODO */ fontSize='48'>James Vollmer</Text>
                 <Spacer/>
                 {/* TODO Change Texts below to a Breadcrumb */}
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={1} fontSize='28'><Text as='u'>Home</Text></Text>
@@ -43,6 +44,7 @@ function Page() {
                 <Spacer/>
                 <Image src={EmailImage} fit='fit' h='40px' mr='25px' />
             </Flex>
+
             <Box
                 overflowY='scroll'
                 maxH='100vh'
@@ -51,12 +53,43 @@ function Page() {
                     width: "0px"
                 }
             }}>
-                <Image
+                <VStack
+                    backgroundImage={BgImage}
+                    // TODO fit='none'
+                    h='100vh'
+                    w='100vw'
+                    flexDirection='column'
+                    align='center'
+                    spacing={0}
+                >
+                    <Spacer/>
+                    <Text as='b' color='#181818' fontSize='48'>
+                        HEY! I'M JAMES VOLLMER
+                    </Text>
+                    <Text color='#808080' fontSize='24'>
+                        Computer Engineering and Computer Sciences
+                    </Text>
+                    <Text color='#808080' fontSize='24'>
+                        student at UW-Madison
+                    </Text>
+                    <Spacer/>
+                    <Image
+                        src={DownArrowImage}
+                        pb='25'
+                        w='25px'
+                        // TODO Make this clickable and transition to the "About" section
+                    />
+                </VStack>
+
+                {/*<Image
                     src={BgImage}
                     fit='none'
                     maxH='100vh'
                     w='100vw'
-                />
+                />*/}
+
+
+
                 <Box h={100} bg='#00ff00'></Box>
             </Box>
             {/*<Grid templateRows='1fr 9fr' h='100vh' w='100vw'>
