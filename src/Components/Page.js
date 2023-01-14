@@ -6,7 +6,7 @@ import BgImage from '../Assets/Background.svg';
 function Page() {
     return (
         <>
-            <HStack position='absolute' h='10vh' w='100vw' zIndex='modal'>
+            <HStack position='absolute' h='10vh' w='100vw'>
                 <Box ml='15px' /* TODO */ boxSize='7.5vh' borderRadius='full' bg='#e0e0e0'>
                     <Image
                         borderRadius='full'
@@ -21,7 +21,14 @@ function Page() {
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>About</Text>
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>Projects</Text>
             </HStack>
-            <Box overflowY='scroll' maxH='100vh'>
+            <Box
+                overflowY='scroll'
+                maxH='100vh'
+                css={{
+                "&::-webkit-scrollbar": {
+                    width: "0px"
+                }
+            }}>
                 <Image
                     src={BgImage}
                 />
