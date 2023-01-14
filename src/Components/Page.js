@@ -1,7 +1,10 @@
 import * as React from "react";
-import { Grid, GridItem, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
+import { Grid, GridItem, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
 import FaceImage from '../Assets/face.png';
-import BgImage from '../Assets/Background.svg';
+import BgImage from '../Assets/background.svg';
+import EmailImage from '../Assets/email.png';
+import LinkedinImage from '../Assets/linkedin.png';
+import GithubImage from '../Assets/github.png';
 
 function Page() {
     return (
@@ -17,10 +20,29 @@ function Page() {
                 </Box>
                 <Text as='b' fontFamily='body' /* TODO */ fontSize='48'>James Vollmer</Text>
                 <Spacer/>
+                {/* TODO Change Texts below to a Breadcrumb */}
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={1} fontSize='28'><Text as='u'>Home</Text></Text>
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>About</Text>
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>Projects</Text>
             </HStack>
+
+            <Flex
+                position='absolute'
+                /* TODO values for the following: */
+                bottom='25px'
+                h='75px'
+                right='50px'
+                w='250px'
+                bg='#00000040'
+                borderRadius='25px'
+                alignItems='center'
+            >
+                <Image src={GithubImage} fit='fit' h='40px' ml='25px' />
+                <Spacer/>
+                <Image src={LinkedinImage} fit='fit' h='40px' />
+                <Spacer/>
+                <Image src={EmailImage} fit='fit' h='40px' mr='25px' />
+            </Flex>
             <Box
                 overflowY='scroll'
                 maxH='100vh'
