@@ -1,12 +1,23 @@
 import * as React from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import { Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
 import Home from './Home';
 import FaceImage from '../Assets/face.png';
 import EmailImage from '../Assets/email.png';
 import LinkedinImage from '../Assets/linkedin.png';
 import GithubImage from '../Assets/github.png';
+import useOnScreen from './useOnScreen';
 
-function Page() {
+function Page(props) {
+    const ref = useRef();
+    const isVisible = useOnScreen(ref);
+
+
+    let y = 0;
+    const maxPageHeight = props.pageHeight; // TODO Dynamically determine this
+    //console.log(maxPageHeight);
+
+
     return (
         <>
             <HStack position='absolute' h='10vh' w='100vw'>
@@ -41,6 +52,15 @@ function Page() {
                 <Spacer/>
                 <Image src={LinkedinImage} fit='fit' h='40px' />
                 <Spacer/>
+
+                {// TODO Remove
+                    isVisible ?
+                    <button onClick={()=>{isVisible ? console.log(`Yep, I'm on screen`) : console.log('nope')}}>Tell me</button>
+                    :
+                    <></>
+                }
+
+
                 <Image src={EmailImage} fit='fit' h='40px' mr='25px' />
             </Flex>
 
@@ -48,13 +68,37 @@ function Page() {
                 overflowY='scroll'
                 maxH='100vh'
                 css={{
-                "&::-webkit-scrollbar": {
-                    width: "0px"
-                }
-            }}>
+                    "&::-webkit-scrollbar": {
+                        width: "0px"
+                    }
+                }}
+                /* TODO onWheel={ event => {
+                    //console.log("Event pageY:",event.pageY);
+                    console.log("Event Y:",event.y);
+                    console.log("Event offsetY:",event.nativeEvent.wheelDelta);
+                    console.log("Event offsetY:",event.deltaY);
+                    //console.log("Event screenY:",event.screenY);
+
+                    y += event.deltaY;//nativeEvent.wheelDelta;
+
+                    if(y < 0) y = 0;
+                    else if(y > maxPageHeight) y = maxPageHeight;
+
+                    if (event.nativeEvent.deltaY < 0) {
+                        console.log('scroll up', y);
+                    } else {
+                        console.log('scroll down', y);
+                    }
+                }}*/
+            >
+                {/* TODO The top of the scrollable section */}
+                <div ref={ref}/>
+
                 <Home/>
 
-                <Box h={100} bg='#00ff00'></Box>
+                <Box h='320px' bg='#ff0000'></Box>
+                <Box h='320px' bg='#00ff00'></Box>
+                <Box h='321px' bg='#0000ff'></Box>
             </Box>
         </>
     );
