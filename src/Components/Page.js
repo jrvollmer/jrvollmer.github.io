@@ -3,7 +3,7 @@ import { Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
 import Home from './Home';
 import AboutMe from './AboutMe';
 import { useRef } from "react";
-import useOnScreen from './useOnScreen';
+import useOnScreen from '../Hooks/useOnScreen';
 import FaceImage from '../Assets/face.png';
 import EmailImage from '../Assets/email.png';
 import LinkedinImage from '../Assets/linkedin.png';
