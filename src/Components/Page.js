@@ -21,8 +21,8 @@ function Page() {
                 <Text as='b' /* TODO */ fontSize='48'>James Vollmer</Text>
                 <Spacer/>
                 {/* TODO Change Texts below to a Breadcrumb */}
-                <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={1} fontSize='28'><Text as='u'>Home</Text></Text>
-                <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>About</Text>
+                <Text as='b' pr='50px' /* TODO */ color='#000000' opacity={1} fontSize='28'><Text as='u'>Home</Text></Text>
+                <Text as='b' pr='50px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>About</Text>
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>Projects</Text>
             </HStack>
 
