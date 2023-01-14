@@ -1,11 +1,10 @@
 import * as React from "react";
-import { Grid, GridItem, VStack, Center, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
+import { Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
+import Home from './Home';
 import FaceImage from '../Assets/face.png';
-import BgImage from '../Assets/background.svg';
 import EmailImage from '../Assets/email.png';
 import LinkedinImage from '../Assets/linkedin.png';
 import GithubImage from '../Assets/github.png';
-import DownArrowImage from '../Assets/down_arrow.svg';
 
 function Page() {
     return (
@@ -29,7 +28,7 @@ function Page() {
 
             <Flex
                 position='absolute'
-                /* TODO values for the following: */
+                // TODO values for the following:
                 bottom='25px'
                 h='75px'
                 right='50px'
@@ -53,51 +52,11 @@ function Page() {
                     width: "0px"
                 }
             }}>
-                <VStack
-                    backgroundImage={BgImage}
-                    // TODO fit='none'
-                    h='100vh'
-                    w='100vw'
-                    flexDirection='column'
-                    align='center'
-                    spacing={0}
-                >
-                    <Spacer/>
-                    <Text as='b' color='#181818' fontSize='48'>
-                        HEY! I'M JAMES VOLLMER
-                    </Text>
-                    <Text color='#808080' fontSize='24'>
-                        Computer Engineering and Computer Sciences
-                    </Text>
-                    <Text color='#808080' fontSize='24'>
-                        student at UW-Madison
-                    </Text>
-                    <Spacer/>
-                    <Image
-                        src={DownArrowImage}
-                        pb='25'
-                        w='25px'
-                        // TODO Make this clickable and transition to the "About" section
-                    />
-                </VStack>
-
-                {/*<Image
-                    src={BgImage}
-                    fit='none'
-                    maxH='100vh'
-                    w='100vw'
-                />*/}
-
-
+                <Home/>
 
                 <Box h={100} bg='#00ff00'></Box>
             </Box>
-            {/*<Grid templateRows='1fr 9fr' h='100vh' w='100vw'>
-                <GridItem row={0} bg='#ffff0000'></GridItem>
-                <GridItem row={1} bg='red.500'></GridItem>
-            </Grid>*/}
         </>
-
     );
 }
 
