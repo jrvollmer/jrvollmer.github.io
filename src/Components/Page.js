@@ -17,7 +17,7 @@ function Page() {
                 </Box>
                 <Text as='b' fontFamily='body' /* TODO */ fontSize='48'>James Vollmer</Text>
                 <Spacer/>
-                <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'><Text as='u'>Home</Text></Text>
+                <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={1} fontSize='28'><Text as='u'>Home</Text></Text>
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>About</Text>
                 <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>Projects</Text>
             </HStack>
@@ -31,6 +31,9 @@ function Page() {
             }}>
                 <Image
                     src={BgImage}
+                    fit='none'
+                    maxH='100vh'
+                    w='100vw'
                 />
                 <Box h={100} bg='#00ff00'></Box>
             </Box>
