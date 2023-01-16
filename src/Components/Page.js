@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
+import { Link, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
 import Home from './Home';
 import AboutMe from './AboutMe';
 import { useRef } from "react";
@@ -8,6 +8,7 @@ import FaceImage from '../Assets/face.png';
 import EmailImage from '../Assets/email.png';
 import LinkedinImage from '../Assets/linkedin.png';
 import GithubImage from '../Assets/github.png';
+
 
 function Page() {
     // There will be a reference element to determine when the user is at the top of the screen
@@ -60,19 +61,26 @@ function Page() {
                 bottom='25px'
                 h='75px'
                 right='50px'
-                w='250px'
+                w='180px'
                 bg='#00000040'
                 borderRadius='25px'
                 alignItems='center'
                 backdropFilter='auto'
                 backdropBlur='15px' // TODO Tune or drop the blur
             >
-                {/* TODO Add functionality */}
+                {/*
+                TODO Add functionality or remove
                 <Image src={GithubImage} fit='fit' h='40px' ml='25px' />
+                <Spacer/>*/}
+
+                <Link href='https://www.linkedin.com/in/james-vollmer' isExternal>
+                    <Image src={LinkedinImage} fit='fit' h='40px' ml='25px' />
+                </Link>
+                {/*<Image src={LinkedinImage} fit='fit' h='40px' />*/}
                 <Spacer/>
-                <Image src={LinkedinImage} fit='fit' h='40px' />
-                <Spacer/>
-                <Image src={EmailImage} fit='fit' h='40px' mr='25px' />
+                <Link href='mailto:jrvollmer@wisc.edu' isExternal>
+                    <Image src={EmailImage} fit='fit' h='40px' mr='25px' />
+                </Link>
             </Flex>
 
             <Box
