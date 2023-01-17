@@ -60,7 +60,7 @@ function Page() {
                 // TODO values for the following:
                 bottom='25px'
                 h='75px'
-                right='50px'
+                right='75px'
                 w='180px'
                 bg='#00000040'
                 borderRadius='25px'
@@ -76,7 +76,6 @@ function Page() {
                 <Link href='https://www.linkedin.com/in/james-vollmer' isExternal>
                     <Image src={LinkedinImage} fit='fit' h='40px' ml='25px' />
                 </Link>
-                {/*<Image src={LinkedinImage} fit='fit' h='40px' />*/}
                 <Spacer/>
                 <Link href='mailto:jrvollmer@wisc.edu' isExternal>
                     <Image src={EmailImage} fit='fit' h='40px' mr='25px' />
