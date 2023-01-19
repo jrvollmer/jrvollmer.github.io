@@ -1,7 +1,10 @@
 import * as React from "react";
-import { VStack, HStack, Spacer, Text, Box } from '@chakra-ui/react';
+import { Link, VStack, HStack, Spacer, Text, Box, Wrap, Flex } from '@chakra-ui/react';
+import Skill from './Skill';
 
 function Home() {
+    const fontSize={ base: '10px', sm: '12px', md: '14px', lg: '16px', xl: '18px' };
+
     return (
         <VStack
             align='center'
@@ -14,11 +17,11 @@ function Home() {
                 w='95vw'
                 bgColor='#000000'
             />
-            <Text as='b' fontSize='72'>About Me</Text>
+            <Text as='b' fontSize='48'>About Me</Text>
             <Box
                 h='0.375vh'
                 borderRadius='full'
-                w='60vw'
+                w='30vw'
                 bgColor='#000000'
             />
             <HStack w='90vw' h='max-content' pt='7.5vh' align='top'>
@@ -36,18 +39,19 @@ function Home() {
                     <Text
                         pl='25px'
                         pr='25px'
-                        /* TODO */ fontSize={{ base: '10px', sm: '12px', md: '14px', lg: '16px', xl: '18px' }}
+                        /* TODO */ fontSize={fontSize}
                         color='#404040'
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ac auctor augue mauris augue neque gravida in fermentum et.
-                        At ultrices mi tempus imperdiet nulla malesuada pellentesque. Gravida arcu ac tortor dignissim
-                        convallis aenean et. Vulputate mi sit amet mauris commodo quis imperdiet. Quam elementum
-                        pulvinar etiam non quam lacus suspendisse faucibus interdum. Dolor morbi non arcu risus quis.
-                        Risus ultricies tristique nulla aliquet enim tortor at auctor. Imperdiet sed euismod nisi porta
-                        lorem mollis aliquam. Suscipit tellus mauris a diam maecenas sed enim. Enim blandit volutpat
-                        maecenas volutpat blandit aliquam etiam erat velit. Etiam dignissim diam quis enim. Leo duis ut
-                        diam quam nulla porttitor massa id.
+                        I'm a junior studying Computer Engineering and Computer Sciences at the University of Wisconsin-Madison.
+                        As the software lead in <Link href='https://badgerloop.org/' isExternal><u>Badgerloop</u></Link>,
+                        I am responsible for leading the development of all applications used in the car and by the engineers
+                        creating the car. Check out my <b>Projects</b> section for more info about these and my other projects.
+                        <br/>
+                        <br/>
+                        Currently, I'm on co-op at Extreme Engineering Solutions as an Associate Embedded Software Engineer.
+                        I am looking for job opportunities in application development where I can contribute and grow.
+                        If you have opportunities like this, please feel free to send me an email or connect with me on
+                        Linkedin using the links in the bottom-right of the page.
                     </Text>
                 </VStack>
                 <Spacer/>
@@ -55,25 +59,34 @@ function Home() {
                     w='44vw'
                     bgColor='#f4f4f4'
                     borderRadius='15px'
-                    align='center'
                     pt='5px'
                     pb='20px'
                 >
                     <Text as='b' fontSize='36' color='#202020'>
                         My Skills
                     </Text>
-                    <Text
-                        pl='25px'
-                        pr='25px'
-                        /* TODO */ fontSize={{ base: '10px', sm: '12px', md: '14px', lg: '16px', xl: '18px' }}
-                        color='#404040'
-                    >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Vitae sapien pellentesque habitant morbi tristique senectus.
-                        Neque sodales ut etiam sit amet. At erat pellentesque adipiscing commodo. Semper feugiat nibh
-                        sed pulvinar proin gravida hendrerit lectus a. Nunc sed blandit libero volutpat sed cras ornare
-                        arcu.
-                    </Text>
+                    <Flex gap={2} alignItems='center'>
+                        <Skill fontSize={fontSize} text='C++' />
+                        <Skill fontSize={fontSize} text='C' />
+                        <Skill fontSize={fontSize} text='JavaScript' />
+                        <Skill fontSize={fontSize} text='Java' />
+                        <Skill fontSize={fontSize} text='Bash' />
+                        <Skill fontSize={fontSize} text='Python' />
+                        <Skill fontSize={fontSize} text='SQL' />
+                    </Flex>
+                    <Flex gap={2} alignItems='center'>
+                        <Skill fontSize={fontSize} text='Qt' />
+                        <Skill fontSize={fontSize} text='React' />
+                        <Skill fontSize={fontSize} text='Node.js' />
+                        <Skill fontSize={fontSize} text='Figma' />
+                        <Skill fontSize={fontSize} text='Git' />
+                    </Flex>
+                    <Flex gap={2} alignItems='center'>
+                        <Skill fontSize={fontSize} text='Project Management' />
+                        <Skill fontSize={fontSize} text='Leadership' />
+                        <Skill fontSize={fontSize} text='Teamwork' />
+                        <Skill fontSize={fontSize} text='Diligence' />
+                    </Flex>
                 </VStack>
             </HStack>
         </VStack>

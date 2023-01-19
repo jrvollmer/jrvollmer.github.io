@@ -18,10 +18,9 @@ function Home() {
             <Text as='b' color='#181818' fontSize='48'>
                 HEY! I'M JAMES VOLLMER
             </Text>
-            <Text color='#808080' fontSize='24'>
+            <Text color='#808080' fontSize='24' textAlign='center'>
                 Computer Engineering and Computer Sciences
-            </Text>
-            <Text color='#808080' fontSize='24'>
+                <br/>
                 student at UW-Madison
             </Text>
             <Spacer/>
