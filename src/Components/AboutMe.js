@@ -65,7 +65,7 @@ function Home() {
                     <Text as='b' fontSize='36' color='#202020'>
                         My Skills
                     </Text>
-                    <Flex gap={2} alignItems='center'>
+                    <Wrap display='flex' justify='center' py={1} >
                         <Skill fontSize={fontSize} text='C++' />
                         <Skill fontSize={fontSize} text='C' />
                         <Skill fontSize={fontSize} text='JavaScript' />
@@ -73,20 +73,18 @@ function Home() {
                         <Skill fontSize={fontSize} text='Bash' />
                         <Skill fontSize={fontSize} text='Python' />
                         <Skill fontSize={fontSize} text='SQL' />
-                    </Flex>
-                    <Flex gap={2} alignItems='center'>
+
                         <Skill fontSize={fontSize} text='Qt' />
                         <Skill fontSize={fontSize} text='React' />
                         <Skill fontSize={fontSize} text='Node.js' />
                         <Skill fontSize={fontSize} text='Figma' />
                         <Skill fontSize={fontSize} text='Git' />
-                    </Flex>
-                    <Flex gap={2} alignItems='center'>
+
                         <Skill fontSize={fontSize} text='Project Management' />
                         <Skill fontSize={fontSize} text='Leadership' />
                         <Skill fontSize={fontSize} text='Teamwork' />
                         <Skill fontSize={fontSize} text='Diligence' />
-                    </Flex>
+                    </Wrap>
                 </VStack>
             </HStack>
         </VStack>
