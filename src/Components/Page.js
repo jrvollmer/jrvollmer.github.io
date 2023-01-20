@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
 import Home from './Home';
 import AboutMe from './AboutMe';
+import Projects from './Projects';
 import { useRef } from "react";
 import useOnScreen from '../Hooks/useOnScreen';
 import FaceImage from '../Assets/face.png';
@@ -97,11 +98,11 @@ function Page() {
                 {/* TODO The top of the scrollable section */}
                 <div ref={ref}/>
 
-                <Home id='home' />
+                <Home id='home'/>
 
                 <AboutMe id='about'/>
 
-                <div id='projects'>Projects go here</div>
+                <Projects id='projects'/>
             </Box>
         </>
     );
