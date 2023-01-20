@@ -56,6 +56,7 @@ function Page() {
             */}
 
             <Flex
+                zIndex={1}
                 position='absolute'
                 // TODO values for the following:
                 bottom='25px'

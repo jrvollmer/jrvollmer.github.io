@@ -3,7 +3,7 @@ import { Link, Card, CardBody, VStack, HStack, Spacer, Text, Box } from '@chakra
 
 function Skill(props) {
     return (
-        <Card>
+        <Card zIndex={0}>
             <CardBody bgColor='#f0f0f0' /* TODO Different color than the Background section background color. Decide if I want to keep this */ >
                 <Text
                     lineHeight={1}
