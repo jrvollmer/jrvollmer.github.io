@@ -22,6 +22,7 @@ function Page() {
     return (
         <>
             <HStack
+                zIndex={1}
                 position='absolute'
                 h='10vh'
                 w='100vw'
@@ -81,20 +82,19 @@ function Page() {
                     </Text>
                 </Link>
             </HStack>
-            {/* TODO This looks too unnatural when it just pops into existence
+            {/* TODO This looks good, but it shows up behind the cards
                      https://chakra-ui.com/docs/components/transitions
-                atTop ?
-                    <></>
-                    :
-                    <Box
-                        position='absolute'
-                        top='10vh'
-                        h='5px'
-                        borderRadius='full'
-                        w='90vw'
-                        mx='5vw'
-                        bgColor='#000000'
-                    />
+            <ScaleFade in={!atTop}>
+                <Box
+                    position='absolute'
+                    top='10vh'
+                    h='5px'
+                    borderRadius='full'
+                    w='90vw'
+                    mx='5vw'
+                    bgColor='#000000'
+                />
+            </ScaleFade>
             */}
 
             <Flex
