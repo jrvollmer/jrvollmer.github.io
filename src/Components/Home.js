@@ -3,9 +3,10 @@ import { VStack, Image, Text, Spacer } from '@chakra-ui/react';
 import BgImage from '../Assets/background.svg';
 import DownArrowImage from '../Assets/down_arrow.svg';
 
-function Home() {
+function Home(props) {
     return (
         <VStack
+            id={props.id}
             backgroundImage={BgImage}
             // TODO fit='none'
             h='100vh'
@@ -26,7 +27,7 @@ function Home() {
             <Spacer/>
             <Image
                 src={DownArrowImage}
-                pb='25'
+                pb='25px'
                 w='25px'
                 // TODO Make this clickable and transition to the "About" section
             />

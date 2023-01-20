@@ -16,6 +16,7 @@ function Page() {
     // True if at the top of the screen; false otherwise
     const atTop = useOnScreen(ref);
 
+
     return (
         <>
             <HStack
@@ -36,9 +37,9 @@ function Page() {
                 <Text as='b' pl='10px' /* TODO */ fontSize='48'>James Vollmer</Text>
                 <Spacer/>
                 {/* TODO Add functionality */}
-                <Text as='b' pr='50px' /* TODO */ color='#000000' opacity={1} fontSize='28'><Text as='u'>Home</Text></Text>
-                <Text as='b' pr='50px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>About</Text>
-                <Text as='b' pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28'>Projects</Text>
+                <Link pr='50px' /* TODO */ color='#000000' opacity={1} fontSize='28' href='#home'><Text as='u'><b>Home</b></Text></Link>
+                <Link pr='50px' /* TODO */ color='#000000' opacity={0.5} fontSize='28' href='#about'><Text><b>About</b></Text></Link>
+                <Link pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28' href='#projects'><Text><b>Projects</b></Text></Link>
             </HStack>
             {/* TODO This looks too unnatural when it just pops into existence
                 atTop ?
@@ -96,9 +97,11 @@ function Page() {
                 {/* TODO The top of the scrollable section */}
                 <div ref={ref}/>
 
-                <Home/>
+                <Home id='home' />
 
-                <AboutMe/>
+                <AboutMe id='about'/>
+
+                <div id='projects'>Projects go here</div>
             </Box>
         </>
     );

@@ -2,14 +2,17 @@ import * as React from "react";
 import { Link, VStack, HStack, Spacer, Text, Box, Wrap } from '@chakra-ui/react';
 import Skill from './Skill';
 
-function Home() {
+function AboutMe(props) {
     const fontSize={ base: '10px', sm: '12px', md: '14px', lg: '16px', xl: '18px' };
 
     return (
         <VStack
+            id={props.id}
+            mt='-10vh'
+            pt='10vh'
             align='center'
             spacing={0}
-            h='90vh'
+            h='100vh'
         >
             <Box
                 h='0.75vh'
@@ -25,6 +28,7 @@ function Home() {
                 bgColor='#000000'
             />
             {/* TODO Make this a VStack instead of HStack if the screen gets too narrow. Then, remove the lowest fontSize decrement */}
+            {/* TODO Use Show/Hide with breakpoints for this: https://chakra-ui.com/docs/components/show-hide */}
             <HStack w='90vw' h='max-content' pt='7.5vh' align='top'>
                 <VStack
                     w='44vw'
@@ -94,4 +98,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default AboutMe;
