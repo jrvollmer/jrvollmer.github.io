@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, VStack, HStack, Spacer, Text, Box, Wrap, Flex } from '@chakra-ui/react';
+import { Link, VStack, HStack, Spacer, Text, Box, Wrap } from '@chakra-ui/react';
 import Skill from './Skill';
 
 function Home() {
@@ -24,6 +24,7 @@ function Home() {
                 w='30vw'
                 bgColor='#000000'
             />
+            {/* TODO Make this a VStack instead of HStack if the screen gets too narrow. Then, remove the lowest fontSize decrement */}
             <HStack w='90vw' h='max-content' pt='7.5vh' align='top'>
                 <VStack
                     w='44vw'
@@ -39,17 +40,16 @@ function Home() {
                     <Text
                         pl='25px'
                         pr='25px'
-                        /* TODO */ fontSize={fontSize}
+                        fontSize={fontSize}
                         color='#404040'
                     >
                         I'm a junior studying Computer Engineering and Computer Sciences at the University of Wisconsin-Madison.
                         As the software lead in <Link href='https://badgerloop.org/' isExternal><u>Badgerloop</u></Link>,
                         I am responsible for leading the development of all applications used in the car and by the engineers
-                        creating the car. Check out my <b>Projects</b> section for more info about these and my other projects.
+                        creating the car. Check out the <b>Projects</b> section for more info about these and my other projects.
                         <br/>
                         <br/>
-                        Currently, I'm on co-op at Extreme Engineering Solutions as an Associate Embedded Software Engineer.
-                        I am looking for job opportunities in application development where I can contribute and grow.
+                        I am looking for job opportunities in application development where I can play an active role and grow.
                         If you have opportunities like this, please feel free to send me an email or connect with me on
                         Linkedin using the links in the bottom-right of the page.
                     </Text>
@@ -57,12 +57,15 @@ function Home() {
                 <Spacer/>
                 <VStack
                     w='44vw'
-                    bgColor='#f4f4f4'
-                    borderRadius='15px'
+                    //bgColor='#f4f4f4'
+
+                    //borderRadius='15px'
+                    //borderColor='#f4f4f4'
+                    //borderWidth={10}
                     pt='5px'
                     pb='20px'
                 >
-                    <Text as='b' fontSize='36' color='#202020'>
+                    <Text as='b' /*bgColor='#f4f4f4' minW='max-content' w='20%' borderRadius='15px' textAlign='center'*/ /* TODO roundedTop='5px'*/ fontSize='36' color='#202020'>
                         My Skills
                     </Text>
                     <Wrap display='flex' justify='center' py={1} >
