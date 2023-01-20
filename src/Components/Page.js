@@ -3,7 +3,7 @@ import { Link, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
 import Home from './Home';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import useOnScreen from '../Hooks/useOnScreen';
 import FaceImage from '../Assets/face.png';
 import EmailImage from '../Assets/email.png';
@@ -17,6 +17,7 @@ function Page() {
     // True if at the top of the screen; false otherwise
     const atTop = useOnScreen(ref);
 
+    const [section, setSection] = useState('home');
 
     return (
         <>
@@ -37,12 +38,51 @@ function Page() {
                 </Box>
                 <Text as='b' pl='10px' /* TODO */ fontSize='48'>James Vollmer</Text>
                 <Spacer/>
-                {/* TODO Add functionality */}
-                <Link pr='50px' /* TODO */ color='#000000' opacity={1} fontSize='28' href='#home'><Text as='u'><b>Home</b></Text></Link>
-                <Link pr='50px' /* TODO */ color='#000000' opacity={0.5} fontSize='28' href='#about'><Text><b>About</b></Text></Link>
-                <Link pr='100px' /* TODO */ color='#000000' opacity={0.5} fontSize='28' href='#projects'><Text><b>Projects</b></Text></Link>
+                <Link
+                    pr='50px' /* TODO */
+                    color='#000000'
+                    fontSize='28'
+                    href='#home'
+                    onClick={() => setSection('home')}
+                >
+                    <Text
+                        as='b'
+                        opacity={section === 'home' ? 1 : 0.5}
+                    >
+                        {section === 'home' ? <u>Home</u> : <>Home</>}
+                    </Text>
+                </Link>
+                <Link
+                    pr='50px' /* TODO */
+                    color='#000000'
+                    fontSize='28'
+                    href='#about'
+                    onClick={() => setSection('about')}
+                >
+                    <Text
+                        as='b'
+                        opacity={section === 'about' ? 1 : 0.5}
+                    >
+                        {section === 'about' ? <u>About</u> : <>About</>}
+                    </Text>
+                </Link>
+                <Link
+                    pr='50px' /* TODO */
+                    color='#000000'
+                    fontSize='28'
+                    href='#projects'
+                    onClick={() => setSection('projects')}
+                >
+                    <Text
+                        as='b'
+                        opacity={section === 'projects' ? 1 : 0.5}
+                    >
+                        {section === 'projects' ? <u>Projects</u> : <>Projects</>}
+                    </Text>
+                </Link>
             </HStack>
             {/* TODO This looks too unnatural when it just pops into existence
+                     https://chakra-ui.com/docs/components/transitions
                 atTop ?
                     <></>
                     :

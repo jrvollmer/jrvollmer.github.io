@@ -12,7 +12,7 @@ function Projects(props) {
             pt='10vh'
             align='center'
             spacing={0}
-            h='100vh'
+            h='100vh' // TODO Might want to change to max-content if content is larger than 100vh
         >
             <Box
                 h='0.75vh'
