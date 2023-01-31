@@ -6,9 +6,7 @@ import useWindowDimensions from "../Hooks/useWindowDimensions";
 function AboutMe(props) {
     const fontSize={ base: '14px', sm: '14px', md: '14px', lg: '16px', xl: '18px' };
 
-    const { height, width } = useWindowDimensions();
-
-    console.log(width);
+    const { width } = useWindowDimensions();
 
     return (
         <VStack
@@ -40,7 +38,7 @@ function AboutMe(props) {
                     </VStack>
                     :
                     <HStack w='90vw' h='max-content' pt='7.5vh' align='top'>
-                        <Background w='44vw' fontSize={fontSize}/>
+                        <Background mb='20px' w='44vw' fontSize={fontSize}/>
                         <Spacer/>
                         <MySkills w='44vw' fontSize={fontSize}/>
                     </HStack>
@@ -58,6 +56,7 @@ function Background(props) {
             align='center'
             pt='5px'
             pb='20px'
+            mb={props.mb}
         >
             <Text as='b' fontSize='36' color='#202020'>
                 Background
