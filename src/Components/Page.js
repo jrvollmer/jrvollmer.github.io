@@ -57,7 +57,7 @@ function Page() {
                 <Spacer/>
                 {
                     (width <= 768) ?
-                        <HStack pr='50px'>
+                        <HStack pr={{ base: '25px', sm: '50px' }}>
                             <Text
                                 color='#000000'
                                 fontSize={{ base: '22px', sm: '24px' }}
