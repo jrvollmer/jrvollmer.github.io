@@ -16,7 +16,7 @@ function Home(props) {
             spacing={0}
         >
             <Spacer/>
-            <Text as='b' color='#181818' fontSize='48'>
+            <Text as='b' color='#181818' fontSize='48' textAlign='center'>
                 HEY! I'M JAMES VOLLMER
             </Text>
             <Text color='#808080' fontSize='24' textAlign='center'>
