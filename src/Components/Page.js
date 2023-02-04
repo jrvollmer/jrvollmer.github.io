@@ -23,7 +23,7 @@ function Page() {
     const projectsRef = useRef();
     const onProjects = useOnScreen(projectsRef);
 
-    const [section, setSection] = useState('home');
+    //const [section, setSection] = useState('home');
 
     console.log("about:", onAbout, "projects:", onProjects);
 
@@ -52,13 +52,14 @@ function Page() {
                     color='#000000'
                     fontSize='28'
                     href='#home'
-                    onClick={() => setSection('home')}
+                    style={{ textDecoration: 'none' }}
+                    //onClick={() => setSection('home')}
                 >
                     <Text
                         as='b'
-                        opacity={section === 'home' ? 1 : 0.5}
+                        opacity={!(onAbout || onProjects) ? 1 : 0.5}
                     >
-                        {section === 'home' ? <u>Home</u> : <>Home</>}
+                        Home
                     </Text>
                 </Link>
                 <Link
@@ -66,13 +67,14 @@ function Page() {
                     color='#000000'
                     fontSize='28'
                     href='#about'
-                    onClick={() => setSection('about')}
+                    style={{ textDecoration: 'none' }}
+                    //onClick={() => setSection('about')}
                 >
                     <Text
                         as='b'
-                        opacity={section === 'about' ? 1 : 0.5}
+                        opacity={(onAbout && !onProjects) ? 1 : 0.5}
                     >
-                        {section === 'about' ? <u>About</u> : <>About</>}
+                        About
                     </Text>
                 </Link>
                 <Link
@@ -80,13 +82,14 @@ function Page() {
                     color='#000000'
                     fontSize='28'
                     href='#projects'
-                    onClick={() => setSection('projects')}
+                    style={{ textDecoration: 'none' }}
+                    //onClick={() => setSection('projects')}
                 >
                     <Text
                         as='b'
-                        opacity={section === 'projects' ? 1 : 0.5}
+                        opacity={onProjects ? 1 : 0.5}
                     >
-                        {section === 'projects' ? <u>Projects</u> : <>Projects</>}
+                        Projects
                     </Text>
                 </Link>
             </HStack>
