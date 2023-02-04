@@ -33,7 +33,7 @@ function AboutMe(props) {
                 bgColor='#000000'
             />
             {
-                (width <= 750) ?
+                (width <= 768) ?
                     <VStack ref={props.abtRef} w='90vw' h='max-content' pt='7.5vh' align='center'>
                         <Background fontSize={fontSize}/>
                         <MySkills fontSize={fontSize}/>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, Flex, Box, Image, Text, HStack, Spacer } from '@chakra-ui/react';
+import { Link, Flex, Box, Image, Text, HStack, Spacer, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import Home from './Home';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
@@ -43,6 +43,7 @@ function Page() {
                 w='100vw'
                 backdropFilter='auto'
                 backdropBlur={atTop ? '0px' : '10px'} // TODO Tune the blur
+                spacing={0}
             >
                 <Box ml='25px' /* TODO */ minW='55px' boxSize='55px' borderRadius='full' bg='#e0e0e0'>
                     <Image
@@ -52,19 +53,36 @@ function Page() {
                         alt='James Vollmer'
                     />
                 </Box>
-                <Text as='b' pl='10px' fontSize={{ base: '26px', sm: '26px', md: '30px', lg: '30px', xl: '30px' }}>James Vollmer</Text>
+                <Text as='b' pl='10px' fontSize={{ base: '25px', sm: '26px', md: '30px', lg: '30px', xl: '30px' }}>James Vollmer</Text>
                 <Spacer/>
                 {
-                    (width <= 725) ?
-                        <HStack>
+                    (width <= 768) ?
+                        <HStack pr='50px'>
                             <Text
                                 color='#000000'
-                                fontSize='24'
+                                fontSize={{ base: '22px', sm: '24px' }}
                                 as='b'
                             >
-                                Projects
+                                {
+                                    onProjects ?
+                                        "Projects"
+                                        :
+                                        onAbout ?
+                                            "About"
+                                            :
+                                            "Home"
+                                }
                             </Text>
-                            <Image src={MenuImage} fit='scale-down' h='25px' pr='50px' />
+                            <Menu>
+                                <MenuButton h='25px' w='31.25px'>
+                                    <Image src={MenuImage} />
+                                </MenuButton>
+                                <MenuList minW='0' w='150px'>
+                                    <MenuItem as='a' href='#home'>Home</MenuItem>
+                                    <MenuItem as='a' href='#about'>About</MenuItem>
+                                    <MenuItem as='a' href='#projects'>Projects</MenuItem>
+                                </MenuList>
+                            </Menu>
                         </HStack>
                         :
                         <HStack spacing='50px' pr='50px'>
