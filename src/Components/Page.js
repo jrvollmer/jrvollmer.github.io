@@ -47,51 +47,9 @@ function Page() {
                 </Box>
                 <Text as='b' pl='10px' fontSize={{ base: '26px', sm: '28px', md: '28px', lg: '30px', xl: '30px' }}>James Vollmer</Text>
                 <Spacer/>
-                <Link
-                    pr='50px' /* TODO */
-                    color='#000000'
-                    fontSize='24'
-                    href='#home'
-                    style={{ textDecoration: 'none' }}
-                    //onClick={() => setSection('home')}
-                >
-                    <Text
-                        as='b'
-                        opacity={!(onAbout || onProjects) ? 1 : 0.5}
-                    >
-                        Home
-                    </Text>
-                </Link>
-                <Link
-                    pr='50px' /* TODO */
-                    color='#000000'
-                    fontSize='24'
-                    href='#about'
-                    style={{ textDecoration: 'none' }}
-                    //onClick={() => setSection('about')}
-                >
-                    <Text
-                        as='b'
-                        opacity={(onAbout && !onProjects) ? 1 : 0.5}
-                    >
-                        About
-                    </Text>
-                </Link>
-                <Link
-                    pr='50px' /* TODO */
-                    color='#000000'
-                    fontSize='24'
-                    href='#projects'
-                    style={{ textDecoration: 'none' }}
-                    //onClick={() => setSection('projects')}
-                >
-                    <Text
-                        as='b'
-                        opacity={onProjects ? 1 : 0.5}
-                    >
-                        Projects
-                    </Text>
-                </Link>
+                <SectionLink section='Home' currSection={!(onAbout || onProjects)}/>
+                <SectionLink section='About' currSection={onAbout && !onProjects}/>
+                <SectionLink section='Projects' currSection={onProjects}/>
             </HStack>
             {/* TODO This looks good, but it shows up behind the cards
                      https://chakra-ui.com/docs/components/transitions
@@ -156,6 +114,25 @@ function Page() {
                 <Projects id='projects' ref={projectsRef}/>
             </Box>
         </>
+    );
+}
+
+function SectionLink(props) {
+    return (
+        <Link
+            pr='50px' /* TODO */
+            color='#000000'
+            fontSize='24'
+            href={`#${props.section.toLowerCase()}`}
+            style={{ textDecoration: 'none' }}
+        >
+            <Text
+                as='b'
+                opacity={props.currSection ? 1 : 0.5}
+            >
+                {props.section}
+            </Text>
+        </Link>
     );
 }
 
