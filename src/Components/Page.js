@@ -111,12 +111,12 @@ function Page() {
                 zIndex={1}
                 position='fixed'
                 // TODO values for the following:
-                bottom='25px'
-                h='75px'
-                right='75px'
-                w='180px'
+                bottom='50px'
+                h='60px'
+                right={{base: '25px', sm: '50px'}}
+                w='140px'
                 bg='#00000040'
-                borderRadius='25px'
+                borderRadius='20px'
                 alignItems='center'
                 backdropFilter='auto'
                 backdropBlur='15px' // TODO Tune or drop the blur
@@ -127,11 +127,11 @@ function Page() {
                 <Spacer/>*/}
 
                 <Link href='https://www.linkedin.com/in/james-vollmer' isExternal>
-                    <Image src={LinkedinImage} fit='fit' h='40px' ml='25px' />
+                    <Image src={LinkedinImage} fit='fit' h='37.5px' ml='20px' />
                 </Link>
                 <Spacer/>
                 <Link href='mailto:jrvollmer@wisc.edu' isExternal>
-                    <Image src={EmailImage} fit='fit' h='40px' mr='25px' />
+                    <Image src={EmailImage} fit='fit' h='37.5px' mr='20px' />
                 </Link>
             </Flex>
 
