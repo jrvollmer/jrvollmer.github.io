@@ -1,5 +1,5 @@
 import * as React from "react";
-import { VStack, Image, Text, Spacer } from '@chakra-ui/react';
+import { VStack, Image, Text, Spacer, Container } from '@chakra-ui/react';
 import BgImage from '../Assets/background.svg';
 import DownArrowImage from '../Assets/down_arrow.svg';
 
@@ -19,11 +19,11 @@ function Home(props) {
             <Text as='b' color='#181818' fontSize='48' textAlign='center'>
                 HEY! I'M JAMES VOLLMER
             </Text>
-            <Text color='#808080' fontSize='24' textAlign='center'>
-                Computer Engineering and Computer Sciences
-                <br/>
-                student at UW-Madison
+            <Container maxW='575px'>
+            <Text color='#808080' fontSize='24px' textAlign='center'>
+                Computer Engineering and Computer Sciences student at UW-Madison
             </Text>
+            </Container>
             <Spacer/>
             <Image
                 src={DownArrowImage}
