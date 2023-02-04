@@ -5,9 +5,11 @@ import AboutMe from './AboutMe';
 import Projects from './Projects';
 import { useRef, useState } from "react";
 import useOnScreen from '../Hooks/useOnScreen';
+import useWindowDimensions from "../Hooks/useWindowDimensions";
 import FaceImage from '../Assets/face.png';
 import EmailImage from '../Assets/email.png';
 import LinkedinImage from '../Assets/linkedin.png';
+import MenuImage from '../Assets/menu.svg';
 import GithubImage from '../Assets/github.png';
 
 
@@ -17,16 +19,21 @@ function Page() {
     // True if at the top of the screen; false otherwise
     const atTop = useOnScreen(topRef);
 
+    // Reference/Boolean for determining when the user is currently on the About section
     const aboutRef = useRef();
-    const onAbout =  useOnScreen(aboutRef);
+    const onAbout = useOnScreen(aboutRef);
 
+    // Reference/Boolean for determining when the user is currently on the Projects section
     const projectsRef = useRef();
     const onProjects = useOnScreen(projectsRef);
 
+    // TODO  Get the width of the screen
+    const { width } = useWindowDimensions();
+
     //const [section, setSection] = useState('home');
 
-    console.log("about:", onAbout, "projects:", onProjects);
-
+    //console.log("about:", onAbout, "projects:", onProjects);
+    console.log(width)
     return (
         <>
             <HStack
@@ -45,11 +52,27 @@ function Page() {
                         alt='James Vollmer'
                     />
                 </Box>
-                <Text as='b' pl='10px' fontSize={{ base: '26px', sm: '28px', md: '28px', lg: '30px', xl: '30px' }}>James Vollmer</Text>
+                <Text as='b' pl='10px' fontSize={{ base: '26px', sm: '26px', md: '30px', lg: '30px', xl: '30px' }}>James Vollmer</Text>
                 <Spacer/>
-                <SectionLink section='Home' currSection={!(onAbout || onProjects)}/>
-                <SectionLink section='About' currSection={onAbout && !onProjects}/>
-                <SectionLink section='Projects' currSection={onProjects}/>
+                {
+                    (width <= 725) ?
+                        <HStack>
+                            <Text
+                                color='#000000'
+                                fontSize='24'
+                                as='b'
+                            >
+                                Projects
+                            </Text>
+                            <Image src={MenuImage} fit='scale-down' h='25px' pr='50px' />
+                        </HStack>
+                        :
+                        <HStack spacing='50px' pr='50px'>
+                            <SectionLink section='Home' currSection={!(onAbout || onProjects)}/>
+                            <SectionLink section='About' currSection={onAbout && !onProjects}/>
+                            <SectionLink section='Projects' currSection={onProjects}/>
+                        </HStack>
+                }
             </HStack>
             {/* TODO This looks good, but it shows up behind the cards
                      https://chakra-ui.com/docs/components/transitions
@@ -120,7 +143,6 @@ function Page() {
 function SectionLink(props) {
     return (
         <Link
-            pr='50px' /* TODO */
             color='#000000'
             fontSize='24'
             href={`#${props.section.toLowerCase()}`}
