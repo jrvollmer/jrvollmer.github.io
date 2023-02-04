@@ -32,18 +32,14 @@ function AboutMe(props) {
                 w='30vw'
                 bgColor='#000000'
             />
-
-            {/* TODO Move this to the location where I want to switch to being in the "About" section */}
-            <div ref={props.abtRef}/>
-
             {
                 (width <= 750) ?
-                    <VStack w='90vw' h='max-content' pt='7.5vh' align='center'>
+                    <VStack ref={props.abtRef} w='90vw' h='max-content' pt='7.5vh' align='center'>
                         <Background fontSize={fontSize}/>
                         <MySkills fontSize={fontSize}/>
                     </VStack>
                     :
-                    <HStack w='90vw' h='max-content' pt='7.5vh' align='top'>
+                    <HStack ref={props.abtRef} w='90vw' h='max-content' pt='7.5vh' align='top'>
                         <Background mb='20px' w='44vw' fontSize={fontSize}/>
                         <Spacer/>
                         <MySkills w='44vw' fontSize={fontSize}/>
