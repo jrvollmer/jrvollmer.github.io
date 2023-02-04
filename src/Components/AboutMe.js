@@ -3,6 +3,8 @@ import { Link, VStack, HStack, Spacer, Text, Box, Wrap } from '@chakra-ui/react'
 import Skill from './Skill';
 import useWindowDimensions from "../Hooks/useWindowDimensions";
 
+
+
 function AboutMe(props) {
     const fontSize={ base: '14px', sm: '14px', md: '14px', lg: '16px', xl: '18px' };
 
@@ -30,6 +32,10 @@ function AboutMe(props) {
                 w='30vw'
                 bgColor='#000000'
             />
+
+            {/* TODO Move this to the location where I want to switch to being in the "About" section */}
+            <div ref={props.abtRef}/>
+
             {
                 (width <= 750) ?
                     <VStack w='90vw' h='max-content' pt='7.5vh' align='center'>
@@ -120,4 +126,6 @@ function MySkills(props) {
     );
 }
 
-export default AboutMe;
+export default React.forwardRef((props, ref) =>
+    <AboutMe abtRef={ref} {...props}/>
+);

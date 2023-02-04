@@ -13,11 +13,19 @@ import GithubImage from '../Assets/github.png';
 
 function Page() {
     // There will be a reference element to determine when the user is at the top of the screen
-    const ref = useRef();
+    const topRef = useRef();
     // True if at the top of the screen; false otherwise
-    const atTop = useOnScreen(ref);
+    const atTop = useOnScreen(topRef);
+
+    const aboutRef = useRef();
+    const onAbout =  useOnScreen(aboutRef);
+
+    const projectsRef = useRef();
+    const onProjects = useOnScreen(projectsRef);
 
     const [section, setSection] = useState('home');
+
+    console.log("about:", onAbout, "projects:", onProjects);
 
     return (
         <>
@@ -135,14 +143,14 @@ function Page() {
                     }
                 }}
             >
-                {/* TODO The top of the scrollable section */}
-                <div ref={ref}/>
+                {/* The top of the scrollable section */}
+                <div ref={topRef}/>
 
                 <Home id='home'/>
 
-                <AboutMe id='about'/>
+                <AboutMe id='about' ref={aboutRef}/>
 
-                <Projects id='projects'/>
+                <Projects id='projects' ref={projectsRef}/>
             </Box>
         </>
     );
