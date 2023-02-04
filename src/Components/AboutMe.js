@@ -13,8 +13,8 @@ function AboutMe(props) {
     return (
         <VStack
             id={props.id}
-            mt='-10vh'
-            pt='10vh'
+            mt='-75px'
+            pt='75px'
             align='center'
             spacing={0}
             minH='100vh'

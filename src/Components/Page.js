@@ -32,12 +32,12 @@ function Page() {
             <HStack
                 zIndex={1}
                 position='absolute'
-                h='10vh'
+                h='75px'
                 w='100vw'
                 backdropFilter='auto'
                 backdropBlur={atTop ? '0px' : '10px'} // TODO Tune the blur
             >
-                <Box ml='25px' /* TODO */ boxSize='7.5vh' borderRadius='full' bg='#e0e0e0'>
+                <Box ml='25px' /* TODO */ minW='55px' boxSize='55px' borderRadius='full' bg='#e0e0e0'>
                     <Image
                         borderRadius='full'
                         fit='scale-down'
@@ -45,12 +45,12 @@ function Page() {
                         alt='James Vollmer'
                     />
                 </Box>
-                <Text as='b' pl='10px' /* TODO */ fontSize='48'>James Vollmer</Text>
+                <Text as='b' pl='10px' fontSize={{ base: '26px', sm: '28px', md: '28px', lg: '30px', xl: '30px' }}>James Vollmer</Text>
                 <Spacer/>
                 <Link
                     pr='50px' /* TODO */
                     color='#000000'
-                    fontSize='28'
+                    fontSize='24'
                     href='#home'
                     style={{ textDecoration: 'none' }}
                     //onClick={() => setSection('home')}
@@ -65,7 +65,7 @@ function Page() {
                 <Link
                     pr='50px' /* TODO */
                     color='#000000'
-                    fontSize='28'
+                    fontSize='24'
                     href='#about'
                     style={{ textDecoration: 'none' }}
                     //onClick={() => setSection('about')}
@@ -80,7 +80,7 @@ function Page() {
                 <Link
                     pr='50px' /* TODO */
                     color='#000000'
-                    fontSize='28'
+                    fontSize='24'
                     href='#projects'
                     style={{ textDecoration: 'none' }}
                     //onClick={() => setSection('projects')}

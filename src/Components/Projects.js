@@ -4,15 +4,15 @@ import { Link, VStack, HStack, Spacer, Text, Box, Wrap, SlideFade, Button} from 
 
 
 function Projects(props) {
-    const fontSize={ base: '10px', sm: '12px', md: '14px', lg: '16px', xl: '18px' };
+    const fontSize={ base: '14px', sm: '14px', md: '14px', lg: '16px', xl: '18px' };
 
     //const [fooBool, setFooBool] = React.useState(false);
 
     return (
         <VStack
             id={props.id}
-            mt='-10vh'
-            pt='10vh'
+            mt='-75px'
+            pt='75px'
             align='center'
             spacing={0}
             h='100vh' // TODO Might want to change to max-content if content is larger than 100vh
