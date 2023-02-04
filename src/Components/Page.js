@@ -31,7 +31,7 @@ function Page() {
         <>
             <HStack
                 zIndex={1}
-                position='absolute'
+                position='fixed'
                 h='75px'
                 w='100vw'
                 backdropFilter='auto'
@@ -68,7 +68,7 @@ function Page() {
 
             <Flex
                 zIndex={1}
-                position='absolute'
+                position='fixed'
                 // TODO values for the following:
                 bottom='25px'
                 h='75px'
