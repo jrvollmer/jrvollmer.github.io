@@ -45,6 +45,7 @@ function Projects(props) {
                              run locally on the laptops of the engineers building Solar Car 1.'
                     ghNames={['chase-car-dashboard']}
                     ghLinks={['https://github.com/badgerloop-software/chase-car-dashboard']}
+                    // TODO Add Figma links (map the same as GitHub links)
                 />
                 <Project
                     image={BackgroundImage}
@@ -52,36 +53,38 @@ function Projects(props) {
                     fontSize={fontSize}
                     name='Solar Car 1 Driver Dashboard'
                     description='Description of the driver dashboard'
-                    ghNames={['chase-car-dashboard']}
-                    ghLinks={['https://github.com/badgerloop-software/chase-car-dashboard']}
+                    ghNames={['sc1-driver-io']}
+                    ghLinks={['https://github.com/badgerloop-software/sc1-driver-io']}
+                    // TODO Add Figma links (map the same as GitHub links)
                 />
                 <Project
                     image={BackgroundImage}
                     imageH='100%'
                     fontSize={fontSize}
-                    name='Battery Cell Testing Application'
+                    name='Battery Cell Testing Application and Analysis'
                     description='Description of the battery testing app.'
-                    ghNames={['chase-car-dashboard']}
-                    ghLinks={['https://github.com/badgerloop-software/chase-car-dashboard']}
+                    ghNames={['battery-testing-app', 'battery-testing-analysis']}
+                    ghLinks={['https://github.com/badgerloop-software/battery-testing-app', 'https://github.com/badgerloop-software/battery-testing-analysis']}
                 />
                 <Project
                     image={BackgroundImage}
                     imageH='100%'
                     fontSize={fontSize}
                     name='Recipe Finder App'
-                    description='Description of the recipe finder app, the cloud database used, and the server used.'
+                    description='Description of the recipe finder app, the server, and the cloud database used.'
                     ghNames={['recipe-finder-app', 'recipe-finder-server']}
-                    ghLinks={['https://github.com/badgerloop-software/chase-car-dashboard','https://github.com/badgerloop-software/chase-car-dashboard']}
+                    ghLinks={['https://github.com/jrvollmer/recipe-finder-app','https://github.com/jrvollmer/recipe-finder-server']}
+                    // TODO Add Figma links (map the same as GitHub links)
                 />
                 <Project
                     image={BackgroundImage}
                     imageH='100%'
                     fontSize={fontSize}
-                    name='Solar Car 1 Engineering Dashboard'
-                    description='The Solar Car 1 Engineering Dashboard is a React App with a Node.js backend designed to
-                             run locally on the laptops of the engineers building Solar Car 1.'
-                    ghNames={['chase-car-dashboard']}
-                    ghLinks={['https://github.com/badgerloop-software/chase-car-dashboard']}
+                    name='This Website'
+                    description='Description of this website'
+                    ghNames={['jrvollmer.github.io']}
+                    ghLinks={['https://github.com/jrvollmer/jrvollmer.github.io']}
+                    // TODO Add Figma links (map the same as GitHub links)
                 />
             </VStack>
 
