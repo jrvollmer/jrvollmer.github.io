@@ -2,6 +2,10 @@ import * as React from "react";
 import { Link, VStack, HStack, Flex, Spacer, Text, Image, Box } from '@chakra-ui/react';
 import GitHubImage from '../Assets/github.png';
 import BackgroundImage from '../Assets/background.svg';
+import EngineeringDashboardImage from '../Assets/Projects/engineering_dashboard.jpg';
+import DriverDashboardImage from '../Assets/Projects/driver_dashboard.png';
+import RecipeFinderImage from '../Assets/Projects/recipe_finder.png';
+import WebsiteImage from '../Assets/Projects/website.png';
 import useWindowDimensions from "../Hooks/useWindowDimensions";
 
 
@@ -38,7 +42,7 @@ function Projects(props) {
             />
             <VStack ref={props.prjRef} pt='15px' spacing='15px'>
                 <Project
-                    image={BackgroundImage}
+                    image={EngineeringDashboardImage}
                     portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='Solar Car 1 Engineering Dashboard'
@@ -49,7 +53,7 @@ function Projects(props) {
                     // TODO Add Figma links (map the same as GitHub links)
                 />
                 <Project
-                    image={BackgroundImage}
+                    image={DriverDashboardImage}
                     portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='Solar Car 1 Driver Dashboard'
@@ -68,7 +72,7 @@ function Projects(props) {
                     ghLinks={['https://github.com/badgerloop-software/battery-testing-app', 'https://github.com/badgerloop-software/battery-testing-analysis']}
                 />
                 <Project
-                    image={BackgroundImage}
+                    image={RecipeFinderImage}
                     portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='Recipe Finder App'
@@ -78,7 +82,7 @@ function Projects(props) {
                     // TODO Add Figma links (map the same as GitHub links)
                 />
                 <Project
-                    image={BackgroundImage}
+                    image={WebsiteImage}
                     portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='This Website'
