@@ -2,10 +2,15 @@ import * as React from "react";
 import { Link, VStack, HStack, Flex, Spacer, Text, Image, Box, Container, Wrap, SlideFade, Button} from '@chakra-ui/react';
 import GitHubImage from '../Assets/github.png';
 import BackgroundImage from '../Assets/background.svg';
+import useWindowDimensions from "../Hooks/useWindowDimensions";
 
 
 function Projects(props) {
     const fontSize={ base: '14px', sm: '14px', md: '14px', lg: '16px', xl: '18px' };
+
+    const { width } = useWindowDimensions();
+
+    const projectIsPortrait = width <= 768;
 
     //const [fooBool, setFooBool] = React.useState(false);
 
@@ -34,7 +39,7 @@ function Projects(props) {
             <VStack ref={props.prjRef} pt='15px' spacing='15px'>
                 <Project
                     image={BackgroundImage}
-                    imageW='30%'
+                    portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='Solar Car 1 Engineering Dashboard'
                     description='The Solar Car 1 Engineering Dashboard is a React App with a Node.js backend designed to
@@ -45,7 +50,7 @@ function Projects(props) {
                 />
                 <Project
                     image={BackgroundImage}
-                    imageW='30%'
+                    portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='Solar Car 1 Driver Dashboard'
                     description='Description of the driver dashboard'
@@ -55,7 +60,7 @@ function Projects(props) {
                 />
                 <Project
                     image={BackgroundImage}
-                    imageW='30%'
+                    portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='Battery Cell Testing Application and Analysis'
                     description='Description of the battery testing app.'
@@ -64,7 +69,7 @@ function Projects(props) {
                 />
                 <Project
                     image={BackgroundImage}
-                    imageW='30%'
+                    portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='Recipe Finder App'
                     description='Description of the recipe finder app, the server, and the cloud database used.'
@@ -74,7 +79,7 @@ function Projects(props) {
                 />
                 <Project
                     image={BackgroundImage}
-                    imageW='30%'
+                    portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='This Website'
                     description='Description of this website'
@@ -103,10 +108,11 @@ function Projects(props) {
 function Project(props) {
     return (
         <Flex
+            direction={props.portrait ? 'column' : 'row'}
             w='95vw'
             gap='20px'
         >
-            <Image src={props.image} fit='contain' w={props.imageW}/>
+            <Image src={props.image} fit='contain' w={props.portrait ? '100%' : '30%'}/>
             {/* TODO Remove
             <ProjectVisual
                 image={props.image}
