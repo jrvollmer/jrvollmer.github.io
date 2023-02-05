@@ -3,14 +3,14 @@ import { Link, Flex, Box, Image, Text, HStack, Spacer, Menu, MenuButton, MenuLis
 import Home from './Home';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import useOnScreen from '../Hooks/useOnScreen';
 import useWindowDimensions from "../Hooks/useWindowDimensions";
 import FaceImage from '../Assets/face.png';
 import EmailImage from '../Assets/email.png';
 import LinkedinImage from '../Assets/linkedin.png';
 import MenuImage from '../Assets/menu.svg';
-import GithubImage from '../Assets/github.png';
+// TODO import GithubImage from '../Assets/github.png';
 
 
 function Page() {
@@ -27,13 +27,9 @@ function Page() {
     const projectsRef = useRef();
     const onProjects = useOnScreen(projectsRef);
 
-    // TODO  Get the width of the screen
+    // Get the width of the window
     const { width } = useWindowDimensions();
 
-    //const [section, setSection] = useState('home');
-
-    //console.log("about:", onAbout, "projects:", onProjects);
-    console.log(width)
     return (
         <>
             <HStack
@@ -45,7 +41,7 @@ function Page() {
                 backdropBlur={atTop ? '0px' : '10px'} // TODO Tune the blur
                 spacing={0}
             >
-                <Box ml='25px' /* TODO */ minW='55px' boxSize='55px' borderRadius='full' bg='#e0e0e0'>
+                <Box ml='25px' minW='55px' boxSize='55px' borderRadius='full' bg='#e0e0e0'>
                     <Image
                         borderRadius='full'
                         fit='scale-down'
@@ -110,7 +106,6 @@ function Page() {
             <Flex
                 zIndex={1}
                 position='fixed'
-                // TODO values for the following:
                 bottom='50px'
                 h='60px'
                 right={{base: '25px', sm: '50px'}}
@@ -153,6 +148,8 @@ function Page() {
                 <AboutMe id='about' ref={aboutRef}/>
 
                 <Projects id='projects' ref={projectsRef}/>
+
+                {/* TODO Might not hurt to add a formal Contact Me section at the bottom */}
             </Box>
         </>
     );

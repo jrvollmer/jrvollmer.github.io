@@ -8,6 +8,7 @@ import useWindowDimensions from "../Hooks/useWindowDimensions";
 function AboutMe(props) {
     const fontSize={ base: '14px', sm: '14px', md: '14px', lg: '16px', xl: '18px' };
 
+    // Get the width of the window
     const { width } = useWindowDimensions();
 
     return (
@@ -89,15 +90,10 @@ function MySkills(props) {
     return (
         <VStack
             w={props.w}
-            //bgColor='#f4f4f4'
-
-            //borderRadius='15px'
-            //borderColor='#f4f4f4'
-            //borderWidth={10}
             pt='5px'
             pb='20px'
         >
-            <Text as='b' /*bgColor='#f4f4f4' minW='max-content' w='20%' borderRadius='15px' textAlign='center'*/ /* TODO roundedTop='5px'*/ fontSize='36' color='#202020'>
+            <Text as='b' fontSize='36' color='#202020'>
                 My Skills
             </Text>
             <Wrap display='flex' justify='center' py={1} >

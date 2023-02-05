@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, VStack, HStack, Flex, Spacer, Text, Image, Box, Container, Wrap, SlideFade, Button} from '@chakra-ui/react';
+import { Link, VStack, HStack, Flex, Spacer, Text, Image, Box } from '@chakra-ui/react';
 import GitHubImage from '../Assets/github.png';
 import BackgroundImage from '../Assets/background.svg';
 import useWindowDimensions from "../Hooks/useWindowDimensions";
@@ -8,11 +8,11 @@ import useWindowDimensions from "../Hooks/useWindowDimensions";
 function Projects(props) {
     const fontSize={ base: '14px', sm: '14px', md: '14px', lg: '16px', xl: '18px' };
 
+    // Get the width of the window
     const { width } = useWindowDimensions();
 
+    // Boolean to determine whether the projects should be shown in portrait orientation
     const projectIsPortrait = width <= 768;
-
-    //const [fooBool, setFooBool] = React.useState(false);
 
     return (
         <VStack
@@ -88,20 +88,7 @@ function Projects(props) {
                     // TODO Add Figma links (map the same as GitHub links)
                 />
             </VStack>
-
-
-            {/*<Button bgColor='#808080' w='50vw' h='10vh' onClick={() => setFooBool(!fooBool)}>
-
-            </Button>
-            <Box>
-                <SlideFade in={fooBool}>
-                    <Box marginTop='100px' w='90vw' h='10vh' bgColor='#000000'  />
-                </SlideFade>
-            </Box>*/}
-
-
         </VStack>
-
     );
 }
 
@@ -113,13 +100,6 @@ function Project(props) {
             gap='20px'
         >
             <Image src={props.image} fit='contain' w={props.portrait ? '100%' : '30%'}/>
-            {/* TODO Remove
-            <ProjectVisual
-                image={props.image}
-                imageH={props.imageH}
-                fontSize={props.fontSize}
-            />
-            */}
             <ProjectDescription
                 fontSize={props.fontSize}
                 name={props.name}
@@ -130,19 +110,6 @@ function Project(props) {
         </Flex>
     );
 }
-
-/* TODO Remove
-function ProjectVisual(props) {
-    return (
-        <VStack
-            align='center'
-            spacing='5px'
-        >
-            <Image src={props.image} fit='contain' m={0} sx={{ maxHeight: `calc(${props.imageH} - 40px)`}} />
-
-        </VStack>
-    );
-}*/
 
 function ProjectDescription(props) {
     return (
