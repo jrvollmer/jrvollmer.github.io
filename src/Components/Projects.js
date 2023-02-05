@@ -16,7 +16,7 @@ function Projects(props) {
             pt='75px'
             align='center'
             spacing={0}
-            minH='100vh' // TODO Might want to change to max-content if content is larger than 100vh
+            minH='100vh'
         >
             <Box
                 h='0.75vh'
@@ -34,7 +34,7 @@ function Projects(props) {
             <VStack ref={props.prjRef} pt='15px' spacing='15px'>
                 <Project
                     image={BackgroundImage}
-                    imageH='100%'
+                    imageW='30%'
                     fontSize={fontSize}
                     name='Solar Car 1 Engineering Dashboard'
                     description='The Solar Car 1 Engineering Dashboard is a React App with a Node.js backend designed to
@@ -45,7 +45,7 @@ function Projects(props) {
                 />
                 <Project
                     image={BackgroundImage}
-                    imageH='100%'
+                    imageW='30%'
                     fontSize={fontSize}
                     name='Solar Car 1 Driver Dashboard'
                     description='Description of the driver dashboard'
@@ -55,7 +55,7 @@ function Projects(props) {
                 />
                 <Project
                     image={BackgroundImage}
-                    imageH='100%'
+                    imageW='30%'
                     fontSize={fontSize}
                     name='Battery Cell Testing Application and Analysis'
                     description='Description of the battery testing app.'
@@ -64,7 +64,7 @@ function Projects(props) {
                 />
                 <Project
                     image={BackgroundImage}
-                    imageH='100%'
+                    imageW='30%'
                     fontSize={fontSize}
                     name='Recipe Finder App'
                     description='Description of the recipe finder app, the server, and the cloud database used.'
@@ -74,7 +74,7 @@ function Projects(props) {
                 />
                 <Project
                     image={BackgroundImage}
-                    imageH='100%'
+                    imageW='30%'
                     fontSize={fontSize}
                     name='This Website'
                     description='Description of this website'
@@ -104,10 +104,9 @@ function Project(props) {
     return (
         <Flex
             w='95vw'
-            h='25vh'
             gap='20px'
         >
-            <Image src={props.image} fit='contain' maxH={props.imageH}/>
+            <Image src={props.image} fit='contain' w={props.imageW}/>
             {/* TODO Remove
             <ProjectVisual
                 image={props.image}
