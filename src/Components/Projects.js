@@ -31,11 +31,7 @@ function Projects(props) {
                 w='30vw'
                 bgColor='#000000'
             />
-
-            {/* TODO Move this to the location where I want to switch to being in the "Projects" section */}
-            <div ref={props.prjRef}/>
-
-            <VStack pt='15px' spacing='15px'>
+            <VStack ref={props.prjRef} pt='15px' spacing='15px'>
                 <Project
                     image={BackgroundImage}
                     imageH='100%'
