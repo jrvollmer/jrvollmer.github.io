@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Link, VStack, HStack, Flex, Spacer, Text, Image, Box } from '@chakra-ui/react';
 import GitHubImage from '../Assets/github.png';
-import BackgroundImage from '../Assets/background.svg';
 import EngineeringDashboardImage from '../Assets/Projects/engineering_dashboard.jpg';
 import DriverDashboardImage from '../Assets/Projects/driver_dashboard.png';
+import BatteryTesterImage from '../Assets/Projects/battery_tester_app.png';
 import RecipeFinderImage from '../Assets/Projects/recipe_finder.png';
 import WebsiteImage from '../Assets/Projects/website.png';
 import useWindowDimensions from "../Hooks/useWindowDimensions";
@@ -73,7 +73,7 @@ function Projects(props) {
                     ghLinks={['https://github.com/badgerloop-software/sc1-driver-io']}
                 />
                 <Project
-                    image={BackgroundImage}
+                    image={BatteryTesterImage}
                     portrait={projectIsPortrait}
                     fontSize={fontSize}
                     name='Battery Cell Testing Application and Analysis'
