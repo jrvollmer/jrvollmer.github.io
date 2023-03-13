@@ -78,9 +78,10 @@ function Background(props) {
                 creating the car. Check out the <b>Projects</b> section for more info about these and my other projects.
                 <br/>
                 <br/>
-                I am looking for job opportunities in application development where I can play an active role and grow.
-                If you have opportunities like this, please feel free to send me an email or connect with me on
-                Linkedin using the links in the bottom-right of the page.
+                I am looking for software engineering opportunities where I can play an active role and grow. I am
+                particularly interested in application development, but I am also interested in gaining experience in
+                new fields. If you have opportunities like this, please feel free to send me an email or connect with me
+                on Linkedin using the links in the bottom-right corner of the page.
             </Text>
         </VStack>
     );
