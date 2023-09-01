@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link, VStack, HStack, Flex, Spacer, Text, Image, Box } from '@chakra-ui/react';
 import GitHubImage from '../Assets/github.png';
-import EngineeringDashboardImage from '../Assets/Projects/engineering_dashboard.jpg';
+import EngineeringDashboardImage from '../Assets/Projects/engineering_dashboard.png';
 import DriverDashboardImage from '../Assets/Projects/driver_dashboard.png';
 import BatteryTesterImage from '../Assets/Projects/battery_tester_app.png';
 import RecipeFinderImage from '../Assets/Projects/recipe_finder.png';
@@ -47,14 +47,19 @@ function Projects(props) {
                     fontSize={fontSize}
                     name='Solar Car 1 Engineering Dashboard'
                     description='The Solar Car 1 Engineering Dashboard is a React App with a Node.js backend that is
-                        designed to run on the laptops of engineers testing Solar Car 1. It receives all telemetry data
-                        from the solar car via a radio connection and displays it in real time. It is able to display up
-                        to ten minutes of data and is available as a Docker image on the GitHub Container registry. The
-                        project also includes batch and bash scripts to simplify the process of pulling and running the
-                        image. It will soon include functionality to record testing data and convert this data into
-                        Excel csv files.'
-                    ghNames={['chase-car-dashboard']}
-                    ghLinks={['https://github.com/badgerloop-software/chase-car-dashboard']}
+                        designed to run on the laptops of engineers testing Solar Car 1 and display data from the solar
+                        car in real time. The application is available as a Docker image on the GitHub Container
+                        Registry, and the project includes batch and bash scripts to simplify the process of pulling and
+                        running the image. The dashboard can display up to ten minutes of data. Additionally, it is able
+                        to record testing data and convert it into Excel CSV files. In order to enable multiple
+                        instances of the engineering dashboard to display data from the solar car simultaneously without
+                        establishing a cellular connection on each host device, the dashboard interfaces with a separate
+                        application that receives data from the solar car via a radio connection or from a VPS and
+                        broadcasts it to connected engineering dashboard instances. The data distribution application
+                        can either broadcast data to multiple other devices connected via a LAN or to an instance of the
+                        engineering dashboard running on the same device.'
+                    ghNames={['chase-car-dashboard', 'engineering-data-distributor']}
+                    ghLinks={['https://github.com/badgerloop-software/chase-car-dashboard', 'https://github.com/badgerloop-software/engineering-data-distributor']}
                 />
                 <Project
                     image={DriverDashboardImage}
@@ -63,12 +68,13 @@ function Projects(props) {
                     name='Solar Car 1 Driver Dashboard'
                     description='The Solar Car 1 Driver Dashboard is a Qt Quick app written in C++ running on a
                         Raspberry Pi 4 in the solar car’s steering wheel. It displays critical telemetry data to the
-                        driver and transmits this data to the engineering dashboard over a radio connection. This
-                        dashboard will soon have the capability to send datasets to a cloud VM with an SQLite database
-                        on top of it in order to transmit data to the engineering dashboard when connected to a cellular
-                        network. In addition, the driver dashboard will be able to automatically switch between
-                        communication methods depending on what connections are available, as well as resend data that
-                        was generated while the Raspberry Pi did not have any available connections.'
+                        driver and transmits this data to the engineering dashboard using one of two methods. When
+                        connected to a cellular network, this dashboard sends datasets to a VPS with an SQLite database,
+                        which the engineering dashboard polls for new data. Otherwise, the driver dashboard sends data
+                        to the engineering dashboard directly over a radio connection, if available. In addition, the
+                        driver dashboard automatically switches between communication methods depending on their
+                        connection status and priority. If neither is available, it queues datasets and resends them
+                        once the Raspberry Pi 4 regains connection.'
                     ghNames={['sc1-driver-io']}
                     ghLinks={['https://github.com/badgerloop-software/sc1-driver-io']}
                 />

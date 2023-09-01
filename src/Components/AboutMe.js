@@ -73,15 +73,20 @@ function Background(props) {
                 color='#404040'
             >
                 I'm a junior studying Computer Engineering and Computer Sciences at the University of Wisconsin-Madison.
-                As the software lead in <Link href='https://badgerloop.org/' isExternal><u>Badgerloop</u></Link>,
-                I am responsible for leading the development of all applications used in the car and by the engineers
-                creating the car. Check out the <b>Projects</b> section for more info about these and my other projects.
+                As the Software Senior Engineer in <Link href='https://badgerloop.org/' isExternal><u><b>Badger Solar
+                Racing</b></u></Link> (a.k.a. TEFKAB - The Engineers Formerly Known As <b>Badgerloop</b>), I am
+                responsible for providing technical support and advice to the software and firmware team leads, as well
+                as managing our team's GitHub organization. For the past two years, I was the software team lead and was
+                responsible for leading the development of all applications used in the car and by the engineers
+                creating the car. Check out the <Link href='#projects'><b>Projects</b></Link> section for more info
+                about these and my other projects.
                 <br/>
                 <br/>
                 I am looking for software engineering opportunities where I can play an active role and grow. I am
-                particularly interested in application development, but I am also interested in gaining experience in
-                new fields. If you have opportunities like this, please feel free to send me an email or connect with me
-                on Linkedin using the links in the bottom-right corner of the page.
+                particularly interested in application development, but I am also open to exploring new areas. If you
+                have opportunities like this, please feel free to <Link href='mailto:jrvollmer@wisc.edu' isExternal>send
+                me an email</Link> or <Link href='https://www.linkedin.com/in/james-vollmer' isExternal>connect with me
+                on Linkedin</Link> using the links in the bottom-right corner of the page.
             </Text>
         </VStack>
     );
