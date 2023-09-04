@@ -118,7 +118,7 @@ function Projects(props) {
                     fontSize={fontSize}
                     name='This Website'
                     description='This website serves as my online portfolio. It is a mobile-friendly React App that is
-                        hosted through GitHub, and it was designed and implemented by yours truly.'
+                        built using GitHub Pages, and it was designed and implemented by yours truly.'
                     ghNames={['jrvollmer.github.io']}
                     ghLinks={['https://github.com/jrvollmer/jrvollmer.github.io']}
                 />
@@ -156,7 +156,7 @@ function ProjectDescription(props) {
             pb='20px'
             px='20px'
         >
-            <Text as='b' fontSize='24px' color='#202020'>
+            <Text as='b' fontSize='24px' color='#202020' textAlign='center'>
                 {props.name}
             </Text>
             <Text
