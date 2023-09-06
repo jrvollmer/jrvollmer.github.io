@@ -73,7 +73,7 @@ function Background(props) {
                 color='#404040'
             >
                 I'm a junior studying Computer Engineering and Computer Sciences at the University of Wisconsin-Madison.
-                As the Software Senior Engineer in <Link href='https://badgerloop.org/' isExternal><u><b>Badger Solar
+                As the Software Senior Engineer in <Link href='https://badgersolarracing.org/' isExternal><u><b>Badger Solar
                 Racing</b></u></Link> (a.k.a. TEFKAB - The Engineers Formerly Known As <b>Badgerloop</b>), I am
                 responsible for providing technical support and advice to the software and firmware team leads, as well
                 as managing our team's GitHub organization. For the past two years, I was the software team lead and was
