@@ -37,74 +37,58 @@ function Page() {
                 position='fixed'
                 h='75px'
                 w='100vw'
+                bg={atTop ? null : '#f8f8f840'}
                 backdropFilter='auto'
                 backdropBlur={atTop ? '0px' : '10px'}
                 spacing={0}
             >
-                <Flex
-                    direction='row'
-                    alignItems='center'
-                    ml={{ base: '10px', sm: '25px' }}
-                    borderRadius='full'
-                    bg={atTop ? null : '#f8f8f840'}
+                <Box ml='25px' minW='55px' boxSize='55px' borderRadius='full' bg='#e0e0e0'>
+                    <Image
+                        borderRadius='full'
+                        fit='scale-down'
+                        src={FaceImage}
+                        alt='James Vollmer'
+                    />
+                </Box>
+                <Text
+                    as='b'
+                    pl='10px'
+                    pr='20px'
+                    color='#1a1c20'
+                    fontSize={{ base: '22px', sm: '26px', md: '30px', lg: '30px', xl: '30px' }}
                 >
-                    <Box minW='55px' boxSize='55px' borderRadius='full' bg='#e0e0e0'>
-                        <Image
-                            borderRadius='full'
-                            fit='scale-down'
-                            src={FaceImage}
-                            alt='James Vollmer'
-                        />
-                    </Box>
-                    <Text
-                        as='b'
-                        pl='10px'
-                        pr='20px'
-                        color='#1a1c20'
-                        fontSize={{ base: '22px', sm: '26px', md: '30px', lg: '30px', xl: '30px' }}
-                    >
-                        James Vollmer
-                    </Text>
-                </Flex>
+                    James Vollmer
+                </Text>
                 <Spacer/>
                 {
                     (width <= 768) ?
-                        <>
-                            <HStack
-                                alignItems='center'
-                                px={3}
-                                borderRadius='full'
-                                bg={atTop ? null : '#f8f8f840'}
-                                spacing={2}
+                        <HStack pr={{ base: '25px', sm: '50px' }}>
+                            <Text
+                                color='#1a1c20'
+                                fontSize={{ base: '20px', sm: '22px' }}
+                                as='b'
                             >
-                                <Text
-                                    color='#1a1c20'
-                                    fontSize={{ base: '20px', sm: '22px' }}
-                                    as='b'
-                                >
-                                    {
-                                        onProjects ?
-                                            "Projects"
+                                {
+                                    onProjects ?
+                                        "Projects"
+                                        :
+                                        onAbout ?
+                                            "About"
                                             :
-                                            onAbout ?
-                                                "About"
-                                                :
-                                                "Home"
-                                    }
-                                </Text>
-                                <Menu>
-                                    <MenuButton h='25px' w='31.25px'>
-                                        <Image src={MenuImage} />
-                                    </MenuButton>
-                                    <MenuList minW='0' w='150px'>
-                                        <MenuItem as='a' href='#home'>Home</MenuItem>
-                                        <MenuItem as='a' href='#about'>About</MenuItem>
-                                        <MenuItem as='a' href='#projects'>Projects</MenuItem>
-                                    </MenuList>
-                                </Menu>
-                            </HStack>
-                            <Box w={{ base: '10px', sm: '25px' }} />
-                        </>
+                                            "Home"
+                                }
+                            </Text>
+                            <Menu>
+                                <MenuButton h='25px' w='31.25px'>
+                                    <Image src={MenuImage} />
+                                </MenuButton>
+                                <MenuList minW='0' w='150px'>
+                                    <MenuItem as='a' href='#home'>Home</MenuItem>
+                                    <MenuItem as='a' href='#about'>About</MenuItem>
+                                    <MenuItem as='a' href='#projects'>Projects</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        </HStack>
                         :
                         <HStack spacing='50px' pr='50px'>
                             <SectionLink section='Home' currSection={!(onAbout || onProjects)}/>
