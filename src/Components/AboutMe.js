@@ -72,21 +72,35 @@ function Background(props) {
                 fontSize={props.fontSize}
                 color='#404040'
             >
-                I'm a junior studying Computer Engineering and Computer Sciences at the University of Wisconsin-Madison.
-                As the Software Senior Engineer in <Link href='https://badgersolarracing.org/' isExternal><u><b>Badger Solar
-                Racing</b></u></Link> (a.k.a. TEFKAB - The Engineers Formerly Known As <b>Badgerloop</b>), I am
-                responsible for providing technical support and advice to the software and firmware team leads, as well
-                as managing our team's GitHub organization. For the past two years, I was the software team lead and was
-                responsible for leading the development of all applications used in the car and by the engineers
-                creating the car. Check out the <Link href='#projects'><b>Projects</b></Link> section for more info
-                about these and my other projects.
+                I'm a senior studying Computer Engineering and Computer Sciences at the University of Wisconsin-Madison.
+                For the past year, I have been working for Tesla as a DSP Software Engineering Intern. Throughout my
+                time in this position, I have gained experience from a variety of tasks, including fleet analytics and
+                metrics dashboarding, efficient algorithm implementation in embedded systems, standalone unit test
+                automation, and hardware-in-the-loop (HIL) test development. For the majority of my internship, I have
+                been the responsible engineer of my team's HIL test system.
                 <br/>
                 <br/>
-                I am looking for software engineering opportunities where I can play an active role and grow. I am
-                particularly interested in application development, but I am also open to exploring new areas. If you
-                have opportunities like this, please feel free to <Link href='mailto:jrvollmer@wisc.edu' isExternal>send
-                me an email</Link> or <Link href='https://www.linkedin.com/in/james-vollmer' isExternal>connect with me
-                on Linkedin</Link> using the links in the bottom-right corner of the page.
+                I have also spent the majority of my undergraduate career
+                in <Link href='https://badgersolarracing.org/' isExternal><u><b>Badger Solar Racing</b></u></Link> (a.k.a.
+                TEFKAB - The Engineers Formerly Known As <b>Badgerloop</b>). As the Software Team Lead, I am responsible
+                for leading a team of developers and coordinating with other team leads to ensure that we are collecting
+                and effectively displaying all beneficial data to our driver and engineers behind the scenes, as well as
+                bringing up testbench displays to assist with electrical hardware and firmware debugging. I am also
+                working with the next generation software lead to ensure stable leadership in future semesters. I was the
+                software lead for my first two years on the team as well, at which point I was responsible for the
+                planning and initial development of all applications used in the car and by the engineers creating it.
+                After that, I was the software senior engineer, providing technical support and advice to the software
+                and firmware team leads, as well as managing our team's GitHub organization. For more information on the
+                projects I worked on in Badger Solar Racing, and more, check out
+                the <Link href='#projects'><b>Projects</b></Link> section.
+                <br/>
+                <br/>
+                I am looking for software engineering opportunities in fast-paced environments where I can continuously
+                grow and be engaged. I am particularly interested in automated test development for embedded systems,
+                but I am also open to exploring new areas. If you have opportunities like this, please feel free
+                to <Link href='mailto:jrvollmer@wisc.edu' isExternal>send me an
+                email</Link> or <Link href='https://www.linkedin.com/in/james-vollmer' isExternal>connect with me on
+                Linkedin</Link> using the links in the bottom-right corner of the page.
             </Text>
         </VStack>
     );
@@ -103,19 +117,21 @@ function MySkills(props) {
                 My Skills
             </Text>
             <Wrap display='flex' justify='center' py={1} >
-                <Skill fontSize={props.fontSize} text='C++' />
-                <Skill fontSize={props.fontSize} text='C' />
-                <Skill fontSize={props.fontSize} text='JavaScript' />
-                <Skill fontSize={props.fontSize} text='Java' />
-                <Skill fontSize={props.fontSize} text='Bash' />
                 <Skill fontSize={props.fontSize} text='Python' />
+                <Skill fontSize={props.fontSize} text='C' />
+                <Skill fontSize={props.fontSize} text='Bash' />
+                <Skill fontSize={props.fontSize} text='C++' />
+                <Skill fontSize={props.fontSize} text='JavaScript' />
                 <Skill fontSize={props.fontSize} text='SQL' />
+
+                <Skill fontSize={props.fontSize} text='Git' />
+                <Skill fontSize={props.fontSize} text='Jenkins' />
+                <Skill fontSize={props.fontSize} text='Docker' />
+                <Skill fontSize={props.fontSize} text='Linux Development' />
 
                 <Skill fontSize={props.fontSize} text='Qt' />
                 <Skill fontSize={props.fontSize} text='React' />
                 <Skill fontSize={props.fontSize} text='Node.js' />
-                <Skill fontSize={props.fontSize} text='Figma' />
-                <Skill fontSize={props.fontSize} text='Git' />
 
                 <Skill fontSize={props.fontSize} text='Project Management' />
                 <Skill fontSize={props.fontSize} text='Leadership' />
