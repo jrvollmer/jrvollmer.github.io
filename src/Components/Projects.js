@@ -4,7 +4,7 @@ import GitHubImage from '../Assets/github.png';
 import EngineeringDashboardImage from '../Assets/Projects/engineering_dashboard.png';
 import DriverDashboardImage from '../Assets/Projects/driver_dashboard.png';
 import BatteryTesterImage from '../Assets/Projects/battery_tester_app.png';
-import RecipeFinderImage from '../Assets/Projects/recipe_finder.png';
+import BuckyKartImage from '../Assets/Projects/bucky_kart.png';
 import WebsiteImage from '../Assets/Projects/website.png';
 import useWindowDimensions from "../Hooks/useWindowDimensions";
 
@@ -41,6 +41,38 @@ function Projects(props) {
                 bgColor='#000000'
             />
             <VStack ref={props.prjRef} pt='15px' pb='55px' spacing='15px'>
+                <Project
+                    image={BuckyKartImage}
+                    portrait={projectIsPortrait}
+                    fontSize={fontSize}
+                    name='Bucky Kart'
+                    description={
+                        <>
+                            Bucky Kart is a Mario Kart-inspired embedded systems project that I developed alongside 3 other
+                            Electrical and Computer Engineering students for our Embedded Microprocessor System Design capstone.
+                            The project utilizes a cross-platform React Native App to select and control RC cars via BLE
+                            communication with a PSoC 6 MCU. We implemented several elements of Mario Kart, such as varying
+                            speed based on terrain (implemented using a color sensor), using items to speed up or disable other
+                            cars (implemented using IR LEDs and receivers), and displaying real time lap counts and times.
+                            <br/>
+                            Throughout the project, I
+                            <ul style={{paddingLeft: 50}}>
+                                <li>Designed the initial audio and IR LED schematics</li>
+                                <li>Designed and developed the mobile application to select and control the cars</li>
+                                <li>Wrote firmware for BLE communication, IR LED control, and audio</li>
+                                <li>Created scripts to process audio files, filter and scale the analog samples, and generate
+                                    C code and markup files to configure DMA channels and play sound effects</li>
+                                <li>Worked with my teammates to integrate and debug hardware and software</li>
+                            </ul>
+                            Our team was awarded the Best ECE 453 Project Award at the university's Electrical and Computer
+                            Engineering capstone open house, which you can read more about <Link
+                            href='https://engineering.wisc.edu/blog/collaborative-innovation-ece-capstone-projects-impress-alumni-and-guests/'
+                            isExternal><u>here</u></Link>.
+                        </>
+                    }
+                    ghNames={['ece453-firmware', 'ece453-controller']}
+                    ghLinks={['https://github.com/jrvollmer/ece453-firmware','https://github.com/jrvollmer/ece453-controller']}
+                />
                 <Project
                     image={EngineeringDashboardImage}
                     portrait={projectIsPortrait}
@@ -96,27 +128,6 @@ function Projects(props) {
                     }
                     ghNames={['battery-testing-app', 'battery-testing-analysis']}
                     ghLinks={['https://github.com/badgerloop-software/battery-testing-app', 'https://github.com/badgerloop-software/battery-testing-analysis']}
-                />
-                <Project
-                    image={RecipeFinderImage}
-                    portrait={projectIsPortrait}
-                    fontSize={fontSize}
-                    name='Recipe Finder App'
-                    description={
-                        <>
-                            The Recipe Finder App is an Android app intended to allow users to search for recipes
-                            by keywords, course, and lists of ingredients to include and exclude. In addition, users can
-                            upload their own recipes. The app interfaces with an Oracle Autonomous Data Warehouse that
-                            stores the recipes, as well as an Oracle Cloud Compute Instance that stores images of the
-                            recipes.
-                            <br/>
-                            The application is still in development and currently has functionality for inserting
-                            recipes into the database, as well as partial functionality for uploading images to the
-                            cloud VM.
-                        </>
-                    }
-                    ghNames={['recipe-finder-app', 'recipe-finder-server']}
-                    ghLinks={['https://github.com/jrvollmer/recipe-finder-app','https://github.com/jrvollmer/recipe-finder-server']}
                 />
                 <Project
                     image={WebsiteImage}
